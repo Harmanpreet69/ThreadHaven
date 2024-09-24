@@ -10,6 +10,11 @@ namespace ThreadHaven.Data
             : base(options)
         {
         }
-        public DbSet<ThreadHaven.Models.Product> Product { get; set; } = default!;
+        // add 1 DBSet object for each model which can perdorm CRUD operations
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }

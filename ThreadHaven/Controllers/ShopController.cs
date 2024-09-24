@@ -34,10 +34,11 @@ namespace ThreadHaven.Controllers
             // Use Product Model to make an in-memory list of products
             var products = new List<Product>();
 
+            /*
             for(int i = 0; i < 5; i++)
             {
                 products.Add(new Product{ Id = i, Name="product " + i, Description = "product description " + i, Price = i });
-            }
+            }*/
 
             return View(products);
         }
