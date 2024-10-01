@@ -6,6 +6,6 @@
         public required string Name { get; set; }
 
         // Child reference to Product Model
-        public List<Product> Products { get; set; }
+        public List<Product>? Products { get; set; }
     }
 }

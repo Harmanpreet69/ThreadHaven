@@ -49,6 +49,6 @@ namespace ThreadHaven.Models
         [MaxLength(100)]
         public string CustomerId { get; set; }
 
-        public List<OrderDetail> OrderDetails { get; set; }
+        public List<OrderDetail>? OrderDetails { get; set; }
     }
 }
