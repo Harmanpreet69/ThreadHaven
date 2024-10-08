@@ -37,6 +37,10 @@
                 <label asp-for="Photo" class="control-label"></label>
                 <input asp-for="Photo" class="form-control" />
                 <span asp-validation-for="Photo" class="text-danger"></span>
+                @if(Model.Photo != null)
+                {
+                    <img src="~/img/products/@Model.Photo" alt="Photo" width="200"/>
+                }
             </div>
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
@@ -44,6 +48,7 @@
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <input type="hidden" name="CurrentPhoto" value="@Model.Photo" />
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
